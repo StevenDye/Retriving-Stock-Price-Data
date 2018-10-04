@@ -14,6 +14,7 @@ end = dt.datetime.now()
 df = web.DataReader(ticker, 'yahoo', start, end)
 df.to_csv('{}.csv'.format(ticker))
 
+
 # Preprocess
 df = pd.read_csv('{}.csv'.format(ticker), parse_dates=True, index_col=0)
 df['100ma'] = df['Adj Close'].rolling(window=100, min_periods=0).mean() # 100 moving average
