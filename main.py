@@ -7,7 +7,7 @@ from matplotlib import style
 from mpl_finance import candlestick_ohlc
 style.use('ggplot')
 
-ticker = 'ITG'
+ticker = 'GOOGL'
 start = dt.datetime(2018,1,1)
 end = dt.datetime.now()
 
